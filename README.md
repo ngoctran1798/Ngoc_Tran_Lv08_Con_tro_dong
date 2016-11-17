@@ -31,24 +31,24 @@
     *Cú pháp:*  
     `void *malloc(kiểu _dl size)`  
     trong đó:  
-      Size là một giá trị kiểu size_t (đã được định nghĩa sẵn)
-    *Chức năng:*  
-  - Cấp phát một vùng nhớ có kích thước size, trả về con trỏ kiểu void chứa địa chỉ ô nhớ đầu của vùng nhớ được cấp phát.  
-  - Nếu không đủ vùng nhớ nó sẽ trả lại giá trị null.  
+      Size là một giá trị kiểu size_t (đã được định nghĩa sẵn)  
+    *Chức năng:*    
+  - Cấp phát một vùng nhớ có kích thước size, trả về con trỏ kiểu void chứa địa chỉ ô nhớ đầu của vùng nhớ được cấp phát.    
+  - Nếu không đủ vùng nhớ nó sẽ trả lại giá trị null.    
   
-**2.Cấp phát bộ nhớ động bằng hàm calloc()    
+**2.Cấp phát bộ nhớ động bằng hàm calloc()**      
     *Cú pháp:*  
     ` (datatype*)calloc(n,sizeof(object));`  
     trong đó:  
-      Datatype là kiểu con trỏ tới kiểu dữ liệu datatype, n là số lượng object cần cấp phát bộ nhớ.  
+      Datatype là kiểu con trỏ tới kiểu dữ liệu datatype, n là số lượng object cần cấp phát bộ nhớ.    
     *Chức năng:*  
-  - Cấp phát bộ nhớ động cho các kiểu dữ liệu.  
+  - Cấp phát bộ nhớ động cho các kiểu dữ liệu.    
   
 **3Cấp phát bộ nhớ đông bằng hàm relloc()**  
     *Cú pháp:*  
     `(datatype*)relloc(buf_p,newsize);`  
     trong đó:  
-    buf_p là con trỏ trỏ tới ùng nhớ được cấp phát từ trước, newsize là kích thước mới cần cấp phát.
+    buf_p là con trỏ trỏ tới ùng nhớ được cấp phát từ trước, newsize là kích thước mới cần cấp phát.  
     *chức năng:*  
   - Cấp phát lại bộ nhớ cho con trỏ đã được cấp phát bộ nhớ trước đó.  
   
