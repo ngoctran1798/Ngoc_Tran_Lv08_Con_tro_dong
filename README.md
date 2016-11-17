@@ -14,6 +14,7 @@
   - Biến động là các biến được tạo ra lúc chạy chương trình, tùy nhu cầu.  
   - Không được xác định từ trước.   
   - Không có tên xác định mà chỉ là gán cho nó một địa chỉ xác định.  
+  
 **2.Cách tạo và truy nhập biến động:**  
   - Việc tạo và thu hồi( giải phóng) biến động dưa vào hàm *malloc()* và *free()* trong thư viện `stdlib.h`  
   - Việc truy nhập dựa vào các biến con trỏ được khai báo ở đầu chương trình dùng để lưu trữ địa chỉ biến động.  
@@ -34,20 +35,23 @@
     *Chức năng:*  
   - Cấp phát một vùng nhớ có kích thước size, trả về con trỏ kiểu void chứa địa chỉ ô nhớ đầu của vùng nhớ được cấp phát.  
   - Nếu không đủ vùng nhớ nó sẽ trả lại giá trị null.  
-**2.Cấp phát bộ nhớ động bằng hàm calloc()  
-*Cú pháp:*  
+  
+**2.Cấp phát bộ nhớ động bằng hàm calloc()    
+    *Cú pháp:*  
     ` (datatype*)calloc(n,sizeof(object));`  
     trong đó:  
       Datatype là kiểu con trỏ tới kiểu dữ liệu datatype, n là số lượng object cần cấp phát bộ nhớ.  
     *Chức năng:*  
   - Cấp phát bộ nhớ động cho các kiểu dữ liệu.  
+  
 **3Cấp phát bộ nhớ đông bằng hàm relloc()**  
-*Cú pháp:*  
+    *Cú pháp:*  
     `(datatype*)relloc(buf_p,newsize);`  
     trong đó:  
     buf_p là con trỏ trỏ tới ùng nhớ được cấp phát từ trước, newsize là kích thước mới cần cấp phát.
     *chức năng:*  
   - Cấp phát lại bộ nhớ cho con trỏ đã được cấp phát bộ nhớ trước đó.  
+  
 **4.Giải phóng bộ nhớ bằng hàm free()**  
     *Cú pháp:*  
     `void free( void *prt)`  
